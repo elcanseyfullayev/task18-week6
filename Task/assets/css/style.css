@@ -1,0 +1,418 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: sans-serif;
+}
+body ::-moz-selection {
+  background-color: #74a84a;
+  color: black;
+}
+body ::selection {
+  background-color: #74a84a;
+  color: black;
+}
+
+header {
+  height: 90vh;
+  background-image: url(https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/10/Banner.jpg);
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+}
+header .welcome {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  flex-direction: column;
+  gap: 20px;
+}
+header .welcome h1 {
+  color: #2c541d;
+  font-size: 80px;
+  text-transform: uppercase;
+  line-height: 1em;
+  letter-spacing: 10px;
+}
+header .welcome h2 {
+  color: #050505;
+  font-size: 40px;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 6.3px;
+}
+header .welcome .shopbtn {
+  background-color: #74a84a;
+  color: white;
+  padding: 15px 40px;
+  cursor: pointer;
+  transition: 400ms;
+}
+header .welcome .shopbtn:hover {
+  background-color: #2c541d;
+}
+header nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 37px 0px;
+  align-items: center;
+  gap: 80px;
+}
+header nav h2 {
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+header nav .accmenu {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+}
+header nav .accmenu .menu {
+  display: flex;
+  flex-direction: row;
+  letter-spacing: 2px;
+  gap: 30px;
+}
+header nav .accmenu .menu .menuitems {
+  cursor: pointer;
+  transition: 400ms;
+}
+header nav .accmenu .menu .menuitems:hover {
+  color: #2c541d;
+}
+header nav .accmenu .account {
+  display: flex;
+  flex-direction: row;
+  font-size: 25px;
+  gap: 20px;
+}
+header nav .accmenu .account .accitems {
+  cursor: pointer;
+}
+header nav .accmenu .account .card {
+  cursor: pointer;
+  position: relative;
+  padding: 0px 18px;
+}
+header nav .accmenu .account .card span {
+  position: absolute;
+  font-size: 12px;
+  background-color: #050505;
+  color: white;
+  right: 0;
+  top: 0;
+  height: 17px;
+  width: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+#resnav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 33px 20px;
+  align-items: center;
+  gap: 80px;
+  display: none;
+}
+#resnav h2 {
+  font-size: 20px;
+}
+#resnav .navmenu {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+#resnav .navmenu .fa-bars {
+  background-color: #050505;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+}
+#resnav .navmenu .card {
+  cursor: pointer;
+  position: relative;
+  padding: 5px 18px;
+  font-size: 25px;
+}
+#resnav .navmenu .card span {
+  position: absolute;
+  font-size: 12px;
+  background-color: #050505;
+  color: white;
+  right: 0;
+  top: 0;
+  height: 17px;
+  width: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+#posters {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  border-bottom: 1px solid gainsboro;
+}
+#posters .poster {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+#posters .poster .hovericon {
+  opacity: 0;
+  transition: 300ms;
+}
+#posters .poster .hovericon i {
+  position: absolute;
+  background-color: white;
+  padding: 10px;
+  border-radius: 50%;
+  right: 15px;
+  top: 20px;
+  color: #74a84a;
+  cursor: pointer;
+}
+#posters .poster:hover > .hovericon {
+  opacity: 0.7;
+}
+#posters .poster .hovericon:hover {
+  opacity: 1;
+}
+#posters .poster img {
+  width: 345px;
+  height: 345px;
+  cursor: pointer;
+}
+#posters .poster img:hover > i {
+  opacity: 1;
+}
+#posters .poster span {
+  font-size: 13.5px;
+  color: gray;
+}
+#posters .poster p {
+  cursor: pointer;
+  width: 80px;
+}
+#posters .poster .price {
+  color: #585858;
+  font-weight: 600;
+}
+
+#say {
+  min-height: 65vh;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  gap: 50px;
+  padding: 0 150px;
+}
+#say h1 {
+  font-size: 41px;
+}
+#say .comments {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+#say .comments .comment {
+  width: 300px;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#say .comments .comment i {
+  font-size: 32px;
+  color: #2c541d;
+}
+#say .comments .comment img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+#say .comments .comment p {
+  color: #585858;
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+#say .comments .comment h5 {
+  font-size: 12px;
+  font-weight: 600px;
+  letter-spacing: 2px;
+}
+
+#gift {
+  background-image: url(https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/10/Call-to-action.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#gift .giftcontent {
+  margin-bottom: 70px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 25px;
+  align-items: center;
+}
+#gift .giftcontent h1 {
+  font-size: 41px;
+  letter-spacing: 5px;
+}
+#gift .giftcontent p {
+  color: #585858;
+  font-size: 17px;
+}
+#gift .giftcontent div {
+  background-color: #74a84a;
+  height: 42px;
+  width: 278px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  transition: 400ms;
+}
+#gift .giftcontent div:hover {
+  background-color: #2c541d;
+}
+
+#delivery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  padding: 0 140px;
+  justify-content: space-around;
+  border-bottom: 1px solid gainsboro;
+}
+#delivery .items {
+  padding: 0 48px 0 0;
+  border-style: solid;
+  border-width: 0 1px 0 0;
+  border-color: #eae9ec;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+#delivery .items i {
+  background-color: #2c541d;
+  color: white;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 24px;
+}
+#delivery .items .itemtext {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#delivery .items .itemtext h4 {
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+#delivery .items .itemtext p {
+  font-size: 14px;
+  color: #585858;
+}
+
+footer {
+  min-height: 150px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+footer .footermenu {
+  display: flex;
+  flex-direction: row;
+  gap: 13px;
+}
+footer .footermenu .footermenuItem {
+  cursor: pointer;
+}
+footer img {
+  height: 35px;
+}
+
+@media screen and (max-width: 1200px) {
+  #resnav {
+    display: flex;
+  }
+  header nav {
+    display: none;
+  }
+}
+@media screen and (max-width: 950px) {
+  #posters {
+    flex-direction: column;
+  }
+  #say {
+    padding: 20px 150px;
+  }
+  #say .comments {
+    flex-direction: column;
+  }
+  #delivery {
+    padding: 20px 140px;
+    flex-direction: column;
+  }
+  #delivery .items {
+    flex-direction: column;
+    border: none;
+    min-height: 150px;
+  }
+}
+@media screen and (max-width: 800px) {
+  header .welcome h2 {
+    font-size: 20px;
+  }
+  #say {
+    padding: 20px 10px;
+  }
+  footer {
+    padding: 20px 0px;
+    flex-direction: column;
+    gap: 50px;
+  }
+  footer .footermenu {
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=style.css.map */
